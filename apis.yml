@@ -74,7 +74,11 @@ apis:
 common:
 - type: Website
   url: https://www.mongodb.com/resources/basics/databases/nosql-explained/data-modeling
-- type: JSON-LD
+- type: JSONSchema
+  url: json-schema/schema-free-document-schema.json
+- type: JSONStructure
+  url: json-structure/schema-free-nosql-structure.json
+- type: JSONLDContext
   url: json-ld/schema-free-context.jsonld
 - type: Vocabulary
   url: vocabulary/schema-free-vocabulary.yml
