@@ -1,0 +1,70 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sf": "https://api-evangelist.github.io/schema-free/vocab#",
+
+    "SchemaFreeDocument": {
+      "@id": "sf:SchemaFreeDocument",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A document stored in a schema-free database without a predefined fixed schema"
+    },
+    "NoSQLDatabase": {
+      "@id": "sf:NoSQLDatabase",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A database that does not require a fixed relational schema"
+    },
+    "DocumentCollection": {
+      "@id": "sf:DocumentCollection",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A collection of related documents in a document store"
+    },
+
+    "_id": {
+      "@id": "schema:identifier",
+      "@type": "xsd:string"
+    },
+    "_collection": {
+      "@id": "sf:collection",
+      "@type": "xsd:string"
+    },
+    "_version": {
+      "@id": "schema:version",
+      "@type": "xsd:integer"
+    },
+    "_created": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "_modified": {
+      "@id": "schema:dateModified",
+      "@type": "xsd:dateTime"
+    },
+    "_type": {
+      "@id": "sf:documentType",
+      "@type": "xsd:string"
+    },
+    "embeddedDocument": {
+      "@id": "sf:embeddedDocument",
+      "@type": "@id",
+      "rdfs:comment": "A document embedded within a parent document"
+    },
+    "documentReference": {
+      "@id": "sf:documentReference",
+      "@type": "@id",
+      "rdfs:comment": "A reference to an external document by ID"
+    },
+    "indexedField": {
+      "@id": "sf:indexedField",
+      "@type": "xsd:string",
+      "rdfs:comment": "A field that has been indexed for query performance"
+    },
+    "shardKey": {
+      "@id": "sf:shardKey",
+      "@type": "xsd:string",
+      "rdfs:comment": "The field used to determine data partitioning/sharding"
+    }
+  }
+}

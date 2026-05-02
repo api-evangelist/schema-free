@@ -1,0 +1,76 @@
+{
+  "title": "Schema-Free NoSQL Data Structure Patterns",
+  "description": "Common structural patterns used in schema-free NoSQL databases for organizing flexible document data.",
+  "patterns": {
+    "embeddedDocument": {
+      "label": "Embedded Document",
+      "description": "Nested document embedded directly within a parent document. Used when related data is always accessed together and has a one-to-one or one-to-few relationship.",
+      "example": {
+        "orderId": "ORD-001",
+        "customer": {
+          "name": "Jane Smith",
+          "email": "jane@example.com"
+        },
+        "items": [
+          {"sku": "PROD-A", "qty": 2, "price": 49.99}
+        ]
+      },
+      "useCases": ["Order with customer info", "Blog post with author details"]
+    },
+    "documentReference": {
+      "label": "Document Reference",
+      "description": "A document stores only the ID of a related document, requiring a separate lookup. Used for many-to-many relationships or when referenced data changes frequently.",
+      "example": {
+        "orderId": "ORD-001",
+        "customerId": "CUST-12345",
+        "productIds": ["PROD-A", "PROD-B"]
+      },
+      "useCases": ["Order referencing customer", "Post referencing tag IDs"]
+    },
+    "bucketPattern": {
+      "label": "Bucket Pattern",
+      "description": "Groups related time-series or high-volume documents into bucket documents to reduce document count and improve read efficiency. Common for IoT sensor data.",
+      "example": {
+        "sensorId": "SENSOR-001",
+        "bucketStart": "2026-05-02T00:00:00Z",
+        "bucketEnd": "2026-05-02T01:00:00Z",
+        "count": 60,
+        "readings": [
+          {"timestamp": "2026-05-02T00:00:00Z", "value": 23.5},
+          {"timestamp": "2026-05-02T00:01:00Z", "value": 23.7}
+        ]
+      }
+    },
+    "outlierPattern": {
+      "label": "Outlier Pattern",
+      "description": "Handles documents that have significantly more data than the average, preventing unbounded array growth by externalizing overflow data to separate documents.",
+      "example": {
+        "productId": "BEST-SELLER-001",
+        "reviewCount": 50000,
+        "hasOverflow": true,
+        "recentReviews": ["...first 100 reviews..."],
+        "overflowIds": ["OVERFLOW-001", "OVERFLOW-002"]
+      }
+    },
+    "typeDiscriminator": {
+      "label": "Type Discriminator",
+      "description": "Using a 'type' field to distinguish between different document variants stored in the same collection. Enables polymorphic collections with application-level routing.",
+      "example": {
+        "type": "physical-product",
+        "id": "PROD-001",
+        "name": "Barcode Scanner",
+        "weight": 0.5,
+        "shippingDimensions": {"l": 8, "w": 4, "h": 3}
+      }
+    }
+  },
+  "keyDesignConsiderations": [
+    "Design schemas around access patterns, not relational normalization",
+    "Embed when data is always accessed together",
+    "Reference when data is accessed independently or shared across documents",
+    "Denormalize for read performance where appropriate",
+    "Consider document size limits (MongoDB: 16MB, DynamoDB: 400KB)",
+    "Use consistent naming conventions even in schemaless environments",
+    "Always include version or timestamp metadata for auditing"
+  ]
+}

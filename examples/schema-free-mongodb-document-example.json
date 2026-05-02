@@ -1,0 +1,51 @@
+{
+  "title": "MongoDB Schema-Free Document Example",
+  "description": "Example of a flexible schema document in MongoDB demonstrating the schemaless approach: embedded documents, arrays, mixed types, and application-level type discrimination.",
+  "collection": "catalog",
+  "document": {
+    "_id": "64f8c9d12a3e4b5c6d7e8f90",
+    "_type": "physical-product",
+    "name": "Zebra ZD421 Direct Thermal Desktop Printer",
+    "sku": "ZD42143-D0E000EZ",
+    "manufacturer": "Zebra Technologies",
+    "categories": ["Printers", "Label Printers", "Desktop Printers"],
+    "pricing": {
+      "msrp": 399.00,
+      "distributor": 249.99,
+      "currency": "USD",
+      "tiers": [
+        {"minQty": 1, "price": 249.99},
+        {"minQty": 10, "price": 239.99},
+        {"minQty": 25, "price": 229.99}
+      ]
+    },
+    "specs": {
+      "resolution": "203 dpi",
+      "maxPrintWidth": 4.09,
+      "maxPrintSpeed": 6,
+      "interfaces": ["USB 2.0", "10/100 Ethernet", "Bluetooth 4.1"],
+      "mediaTypes": ["Direct Thermal"],
+      "operatingTemp": {"min": 41, "max": 104, "unit": "F"}
+    },
+    "inventory": {
+      "quantityOnHand": 142,
+      "warehouse": "Greenville-SC",
+      "reorderPoint": 20,
+      "leadTimeDays": 5
+    },
+    "images": [
+      {"url": "https://cdn.example.com/products/zd421-front.jpg", "view": "front"},
+      {"url": "https://cdn.example.com/products/zd421-side.jpg", "view": "side"}
+    ],
+    "isActive": true,
+    "isObsolete": false,
+    "tags": ["barcode", "label", "thermal", "desktop", "zebra"],
+    "metadata": {
+      "createdAt": "2024-03-15T10:00:00Z",
+      "modifiedAt": "2026-05-01T14:30:00Z",
+      "createdBy": "catalog-import",
+      "version": 3
+    }
+  },
+  "notes": "This document has no fixed schema — fields like 'specs', 'pricing.tiers', and 'images' are application-defined and could vary completely between documents of different _types in the same collection."
+}

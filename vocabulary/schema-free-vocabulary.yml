@@ -1,0 +1,118 @@
+name: Schema Free Vocabulary
+description: Domain vocabulary for schema-free (schemaless) databases and APIs, covering NoSQL patterns, document store concepts, flexible data modeling approaches, and the design trade-offs involved in schema-free architectures.
+url: https://github.com/api-evangelist/schema-free
+created: '2026-05-02'
+modified: '2026-05-02'
+tags:
+- Schema Free
+- Schemaless
+- NoSQL
+- Document Store
+- Vocabulary
+terms:
+- term: Schemaless
+  label: Schemaless
+  definition: A database or storage system that does not enforce a predefined fixed schema for stored records. Documents, rows, or items can have different fields and data types without schema enforcement at the storage layer. The term is somewhat misleading — schemas still exist but are enforced by the application, not the database.
+  tags:
+  - Core Concept
+  - NoSQL
+
+- term: DocumentStore
+  label: Document Store
+  definition: A NoSQL database that stores data as self-contained JSON-like documents. Each document can have a different structure. Examples include MongoDB, CouchDB, Firestore, and Amazon DocumentDB. Documents are grouped in collections without requiring all documents to share the same fields.
+  tags:
+  - Database Type
+  - NoSQL
+
+- term: KeyValueStore
+  label: Key-Value Store
+  definition: A NoSQL database that stores data as pairs of keys (unique identifiers) and values (arbitrary data blobs or structured objects). Key-value stores are the simplest form of schema-free storage. Examples include Redis, DynamoDB (simple key-value mode), and AWS Parameter Store.
+  tags:
+  - Database Type
+  - NoSQL
+
+- term: WideColumnStore
+  label: Wide-Column Store
+  definition: A NoSQL database that organizes data in columns rather than rows, where different rows can have different columns (flexible schema per row). Examples include Apache Cassandra, Google Bigtable, and Apache HBase. Well-suited for time-series data and high write throughput.
+  tags:
+  - Database Type
+  - NoSQL
+
+- term: DynamicMapping
+  label: Dynamic Mapping
+  definition: In Elasticsearch, the automatic detection and assignment of field types when a document with new fields is indexed. Elasticsearch infers types (string → text/keyword, number → long/float, boolean → boolean) without requiring explicit schema definition. Can be customized or disabled with explicit mappings.
+  tags:
+  - Elasticsearch
+  - Schema Management
+
+- term: EmbeddedDocument
+  label: Embedded Document
+  definition: A subdocument nested directly within a parent document in a document store. Embedding is preferred when the related data is always accessed together, has a one-to-one relationship, or exists in a one-to-few relationship. Avoids the need for JOIN operations.
+  tags:
+  - Pattern
+  - MongoDB
+  - Document Store
+
+- term: DocumentReference
+  label: Document Reference
+  definition: A field that stores only the ID of a related document, requiring a separate database query to fetch the related data. Used when related data is large, changes independently, or is shared across many documents. Similar to a foreign key in relational databases.
+  tags:
+  - Pattern
+  - Normalization
+
+- term: BucketPattern
+  label: Bucket Pattern
+  definition: A MongoDB design pattern that groups related time-series or sensor data into fixed-time-window bucket documents to reduce the number of documents and improve query performance. Instead of one document per measurement, one document holds all measurements for a time period.
+  tags:
+  - Pattern
+  - Time Series
+  - MongoDB
+
+- term: ShardKey
+  label: Shard Key
+  definition: The field or combination of fields used to distribute documents across shards (partitions) in a horizontally scaled NoSQL database. Choosing a good shard key is critical for performance — a poor choice can create hotspots. In MongoDB this is set at collection creation; in DynamoDB it is the partition key.
+  tags:
+  - Scalability
+  - Partitioning
+
+- term: BSON
+  label: BSON (Binary JSON)
+  definition: Binary JSON — MongoDB's internal storage format that extends JSON with additional data types including Date, Binary, ObjectId, Decimal128, and more. BSON enables richer type semantics than standard JSON while preserving the flexible document structure.
+  tags:
+  - MongoDB
+  - Data Format
+
+- term: ObjectId
+  label: ObjectId
+  definition: MongoDB's default primary key type — a 12-byte unique identifier that encodes creation timestamp, machine ID, process ID, and a random counter. ObjectIds are generated client-side, enabling distributed ID generation without coordination.
+  tags:
+  - MongoDB
+  - Identity
+
+- term: DenormalizatonTrade
+  label: Denormalization Trade-off
+  definition: In schema-free design, data is often deliberately duplicated (denormalized) across documents to optimize read performance by avoiding joins. The trade-off is larger storage footprint and the need to maintain consistency when duplicated data changes.
+  tags:
+  - Design Pattern
+  - Trade-off
+
+- term: ApplicationLevelSchema
+  label: Application-Level Schema
+  definition: Schema constraints (field types, required fields, allowed values) enforced by application code rather than the database engine. Despite being called "schemaless," every real-world schema-free application has an implicit schema — it just lives in the application code and must be maintained manually.
+  tags:
+  - Schema Management
+  - Best Practice
+
+- term: ConditionalIndexing
+  label: Sparse / Partial Index
+  definition: An index that only includes documents where a specific field exists or meets a condition. In MongoDB, called a "sparse index" or "partial index." Useful in schemaless collections where not all documents have the indexed field, reducing index size and improving write performance.
+  tags:
+  - Indexing
+  - Performance
+
+- term: ORM
+  label: Object-Document Mapper (ODM)
+  definition: A library that maps application objects to NoSQL documents and enforces schema constraints at the application layer. Mongoose (Node.js/MongoDB) and MongoEngine (Python/MongoDB) are the most popular ODMs. ODMs provide the schema enforcement that the database itself does not.
+  tags:
+  - Tooling
+  - Schema Management

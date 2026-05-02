@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/api-evangelist/schema-free/blob/main/json-schema/schema-free-document-schema.json",
+  "title": "Schema-Free Document",
+  "description": "Represents a document in a schema-free (schemaless) database. Only minimal metadata fields are required; all other content is flexible and application-defined.",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": "string",
+      "description": "Unique identifier for the document (auto-assigned or application-provided)"
+    },
+    "_collection": {
+      "type": "string",
+      "description": "Collection or table name this document belongs to"
+    },
+    "_version": {
+      "type": "integer",
+      "description": "Optimistic concurrency version number for the document",
+      "minimum": 1
+    },
+    "_created": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the document was first created"
+    },
+    "_modified": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the document was last modified"
+    },
+    "_type": {
+      "type": "string",
+      "description": "Application-level document type discriminator (e.g., 'user', 'order', 'product')"
+    }
+  },
+  "additionalProperties": true,
+  "description_notes": "The additionalProperties: true setting reflects the schemaless nature of these databases — any additional fields are valid. Application-level validation handles field constraints.",
+  "examples": [
+    {
+      "_id": "64f8c9d12a3e4b5c6d7e8f90",
+      "_collection": "products",
+      "_version": 3,
+      "_created": "2026-01-15T09:00:00Z",
+      "_modified": "2026-05-01T14:30:00Z",
+      "_type": "physical-product",
+      "name": "Zebra ZD421 Label Printer",
+      "sku": "ZD42143-D0E000EZ",
+      "price": 249.99,
+      "tags": ["barcode", "thermal", "desktop"],
+      "specs": {
+        "resolution": "203 dpi",
+        "maxPrintWidth": 4.09,
+        "interfaces": ["USB", "Ethernet", "Bluetooth"]
+      }
+    }
+  ]
+}
