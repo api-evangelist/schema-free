@@ -1,7 +1,7 @@
 name: Schema Free
 description: Schema Free (schemaless) databases and APIs allow data to be stored and retrieved without a predefined fixed schema. Rather than enforcing structure at the database level, schema-free systems delegate schema management to the application layer. This enables rapid prototyping, flexible document storage, and agile development workflows. Key schema-free technologies include MongoDB (document store), Redis (key-value store), Apache Cassandra (wide-column store), Amazon DynamoDB (managed NoSQL), Elasticsearch (search/document store), and Apache CouchDB. While called "schemaless," these systems typically have implicit application-level schemas that must be managed carefully.
 url: https://github.com/api-evangelist/schema-free
-x-type: topic
+kind: topic
 tags:
 - Schema Free
 - Schemaless
