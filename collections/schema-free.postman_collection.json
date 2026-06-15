@@ -1,0 +1,994 @@
+{
+  "item": [
+    {
+      "id": "3089cdd0-6d36-497b-905f-bb33a7edb78c",
+      "name": "Documents",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "68711f88-1de2-479c-90cb-62a17e845a85",
+          "name": "Insert one document",
+          "request": {
+            "name": "Insert one document",
+            "description": {},
+            "url": {
+              "path": [
+                "action",
+                "insertOne"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Atlas App Services application ID",
+                  "type": "any",
+                  "value": "{{APP_ID}}",
+                  "key": "APP_ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dataSource\": \"<string>\",\n  \"database\": \"<string>\",\n  \"collection\": \"<string>\",\n  \"document\": \"<object>\",\n  \"documents\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"filter\": \"<object>\",\n  \"update\": \"<object>\",\n  \"pipeline\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"projection\": \"<object>\",\n  \"sort\": \"<object>\",\n  \"limit\": \"<integer>\",\n  \"skip\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3062595d-f690-4a0d-bd2f-665af15116ba",
+              "name": "Inserted ID.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "action",
+                    "insertOne"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Atlas App Services application ID",
+                      "type": "any",
+                      "value": "{{APP_ID}}",
+                      "key": "APP_ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "apiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"dataSource\": \"mongodb-atlas\",\n  \"database\": \"<string>\",\n  \"collection\": \"<string>\",\n  \"document\": \"<object>\",\n  \"documents\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"filter\": \"<object>\",\n  \"update\": \"<object>\",\n  \"pipeline\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"projection\": \"<object>\",\n  \"sort\": \"<object>\",\n  \"limit\": \"<integer>\",\n  \"skip\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7997bcbb-58bb-4b7e-ad63-1aeb09690865",
+          "name": "Insert many documents",
+          "request": {
+            "name": "Insert many documents",
+            "description": {},
+            "url": {
+              "path": [
+                "action",
+                "insertMany"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Atlas App Services application ID",
+                  "type": "any",
+                  "value": "{{APP_ID}}",
+                  "key": "APP_ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dataSource\": \"<string>\",\n  \"database\": \"<string>\",\n  \"collection\": \"<string>\",\n  \"document\": \"<object>\",\n  \"documents\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"filter\": \"<object>\",\n  \"update\": \"<object>\",\n  \"pipeline\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"projection\": \"<object>\",\n  \"sort\": \"<object>\",\n  \"limit\": \"<integer>\",\n  \"skip\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d754ee3b-7632-47b5-8f0f-47338fd0e7ee",
+              "name": "Inserted IDs.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "action",
+                    "insertMany"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Atlas App Services application ID",
+                      "type": "any",
+                      "value": "{{APP_ID}}",
+                      "key": "APP_ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "apiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"dataSource\": \"mongodb-atlas\",\n  \"database\": \"<string>\",\n  \"collection\": \"<string>\",\n  \"document\": \"<object>\",\n  \"documents\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"filter\": \"<object>\",\n  \"update\": \"<object>\",\n  \"pipeline\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"projection\": \"<object>\",\n  \"sort\": \"<object>\",\n  \"limit\": \"<integer>\",\n  \"skip\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e934d4a3-d893-4738-a1ab-df11311c4465",
+          "name": "Find one document",
+          "request": {
+            "name": "Find one document",
+            "description": {},
+            "url": {
+              "path": [
+                "action",
+                "findOne"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Atlas App Services application ID",
+                  "type": "any",
+                  "value": "{{APP_ID}}",
+                  "key": "APP_ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dataSource\": \"<string>\",\n  \"database\": \"<string>\",\n  \"collection\": \"<string>\",\n  \"document\": \"<object>\",\n  \"documents\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"filter\": \"<object>\",\n  \"update\": \"<object>\",\n  \"pipeline\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"projection\": \"<object>\",\n  \"sort\": \"<object>\",\n  \"limit\": \"<integer>\",\n  \"skip\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5e05255b-cb54-4ee3-9980-4ef9fd4e3623",
+              "name": "A document.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "action",
+                    "findOne"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Atlas App Services application ID",
+                      "type": "any",
+                      "value": "{{APP_ID}}",
+                      "key": "APP_ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "apiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"dataSource\": \"mongodb-atlas\",\n  \"database\": \"<string>\",\n  \"collection\": \"<string>\",\n  \"document\": \"<object>\",\n  \"documents\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"filter\": \"<object>\",\n  \"update\": \"<object>\",\n  \"pipeline\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"projection\": \"<object>\",\n  \"sort\": \"<object>\",\n  \"limit\": \"<integer>\",\n  \"skip\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "256a15e7-0b8d-4fe3-a68f-adb3eccfaf0c",
+          "name": "Find documents",
+          "request": {
+            "name": "Find documents",
+            "description": {},
+            "url": {
+              "path": [
+                "action",
+                "find"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Atlas App Services application ID",
+                  "type": "any",
+                  "value": "{{APP_ID}}",
+                  "key": "APP_ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dataSource\": \"<string>\",\n  \"database\": \"<string>\",\n  \"collection\": \"<string>\",\n  \"document\": \"<object>\",\n  \"documents\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"filter\": \"<object>\",\n  \"update\": \"<object>\",\n  \"pipeline\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"projection\": \"<object>\",\n  \"sort\": \"<object>\",\n  \"limit\": \"<integer>\",\n  \"skip\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "47831d6d-a229-4215-85dc-88bda309aa25",
+              "name": "Documents array.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "action",
+                    "find"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Atlas App Services application ID",
+                      "type": "any",
+                      "value": "{{APP_ID}}",
+                      "key": "APP_ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "apiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"dataSource\": \"mongodb-atlas\",\n  \"database\": \"<string>\",\n  \"collection\": \"<string>\",\n  \"document\": \"<object>\",\n  \"documents\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"filter\": \"<object>\",\n  \"update\": \"<object>\",\n  \"pipeline\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"projection\": \"<object>\",\n  \"sort\": \"<object>\",\n  \"limit\": \"<integer>\",\n  \"skip\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b49fb24f-da2b-4371-b327-2619592befe2",
+          "name": "Update one document",
+          "request": {
+            "name": "Update one document",
+            "description": {},
+            "url": {
+              "path": [
+                "action",
+                "updateOne"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Atlas App Services application ID",
+                  "type": "any",
+                  "value": "{{APP_ID}}",
+                  "key": "APP_ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dataSource\": \"<string>\",\n  \"database\": \"<string>\",\n  \"collection\": \"<string>\",\n  \"document\": \"<object>\",\n  \"documents\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"filter\": \"<object>\",\n  \"update\": \"<object>\",\n  \"pipeline\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"projection\": \"<object>\",\n  \"sort\": \"<object>\",\n  \"limit\": \"<integer>\",\n  \"skip\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "99fb795e-fe77-4aab-b3b7-6830af5a4b76",
+              "name": "Update result.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "action",
+                    "updateOne"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Atlas App Services application ID",
+                      "type": "any",
+                      "value": "{{APP_ID}}",
+                      "key": "APP_ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "apiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"dataSource\": \"mongodb-atlas\",\n  \"database\": \"<string>\",\n  \"collection\": \"<string>\",\n  \"document\": \"<object>\",\n  \"documents\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"filter\": \"<object>\",\n  \"update\": \"<object>\",\n  \"pipeline\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"projection\": \"<object>\",\n  \"sort\": \"<object>\",\n  \"limit\": \"<integer>\",\n  \"skip\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "17d50e8a-e7a0-4776-a838-1668a666d022",
+          "name": "Update many documents",
+          "request": {
+            "name": "Update many documents",
+            "description": {},
+            "url": {
+              "path": [
+                "action",
+                "updateMany"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Atlas App Services application ID",
+                  "type": "any",
+                  "value": "{{APP_ID}}",
+                  "key": "APP_ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dataSource\": \"<string>\",\n  \"database\": \"<string>\",\n  \"collection\": \"<string>\",\n  \"document\": \"<object>\",\n  \"documents\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"filter\": \"<object>\",\n  \"update\": \"<object>\",\n  \"pipeline\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"projection\": \"<object>\",\n  \"sort\": \"<object>\",\n  \"limit\": \"<integer>\",\n  \"skip\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "99f3c824-24ab-4f04-a7fa-58fea3d6b17b",
+              "name": "Update result.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "action",
+                    "updateMany"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Atlas App Services application ID",
+                      "type": "any",
+                      "value": "{{APP_ID}}",
+                      "key": "APP_ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "apiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"dataSource\": \"mongodb-atlas\",\n  \"database\": \"<string>\",\n  \"collection\": \"<string>\",\n  \"document\": \"<object>\",\n  \"documents\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"filter\": \"<object>\",\n  \"update\": \"<object>\",\n  \"pipeline\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"projection\": \"<object>\",\n  \"sort\": \"<object>\",\n  \"limit\": \"<integer>\",\n  \"skip\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5d483510-474e-4815-bf4a-0758de91ab69",
+          "name": "Delete one document",
+          "request": {
+            "name": "Delete one document",
+            "description": {},
+            "url": {
+              "path": [
+                "action",
+                "deleteOne"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Atlas App Services application ID",
+                  "type": "any",
+                  "value": "{{APP_ID}}",
+                  "key": "APP_ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dataSource\": \"<string>\",\n  \"database\": \"<string>\",\n  \"collection\": \"<string>\",\n  \"document\": \"<object>\",\n  \"documents\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"filter\": \"<object>\",\n  \"update\": \"<object>\",\n  \"pipeline\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"projection\": \"<object>\",\n  \"sort\": \"<object>\",\n  \"limit\": \"<integer>\",\n  \"skip\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f3374231-c8d9-4d08-8dca-d5961d94374a",
+              "name": "Delete result.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "action",
+                    "deleteOne"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Atlas App Services application ID",
+                      "type": "any",
+                      "value": "{{APP_ID}}",
+                      "key": "APP_ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "apiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"dataSource\": \"mongodb-atlas\",\n  \"database\": \"<string>\",\n  \"collection\": \"<string>\",\n  \"document\": \"<object>\",\n  \"documents\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"filter\": \"<object>\",\n  \"update\": \"<object>\",\n  \"pipeline\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"projection\": \"<object>\",\n  \"sort\": \"<object>\",\n  \"limit\": \"<integer>\",\n  \"skip\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a0791980-3624-4012-a8bc-224265a5e3cb",
+          "name": "Delete many documents",
+          "request": {
+            "name": "Delete many documents",
+            "description": {},
+            "url": {
+              "path": [
+                "action",
+                "deleteMany"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Atlas App Services application ID",
+                  "type": "any",
+                  "value": "{{APP_ID}}",
+                  "key": "APP_ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dataSource\": \"<string>\",\n  \"database\": \"<string>\",\n  \"collection\": \"<string>\",\n  \"document\": \"<object>\",\n  \"documents\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"filter\": \"<object>\",\n  \"update\": \"<object>\",\n  \"pipeline\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"projection\": \"<object>\",\n  \"sort\": \"<object>\",\n  \"limit\": \"<integer>\",\n  \"skip\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7f7b2645-ac64-4593-abc0-bf6fb0dffba2",
+              "name": "Delete result.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "action",
+                    "deleteMany"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Atlas App Services application ID",
+                      "type": "any",
+                      "value": "{{APP_ID}}",
+                      "key": "APP_ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "apiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"dataSource\": \"mongodb-atlas\",\n  \"database\": \"<string>\",\n  \"collection\": \"<string>\",\n  \"document\": \"<object>\",\n  \"documents\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"filter\": \"<object>\",\n  \"update\": \"<object>\",\n  \"pipeline\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"projection\": \"<object>\",\n  \"sort\": \"<object>\",\n  \"limit\": \"<integer>\",\n  \"skip\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e095b584-6f0a-44c5-ad43-d556ef0c9b81",
+          "name": "Run an aggregation pipeline",
+          "request": {
+            "name": "Run an aggregation pipeline",
+            "description": {},
+            "url": {
+              "path": [
+                "action",
+                "aggregate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Atlas App Services application ID",
+                  "type": "any",
+                  "value": "{{APP_ID}}",
+                  "key": "APP_ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dataSource\": \"<string>\",\n  \"database\": \"<string>\",\n  \"collection\": \"<string>\",\n  \"document\": \"<object>\",\n  \"documents\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"filter\": \"<object>\",\n  \"update\": \"<object>\",\n  \"pipeline\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"projection\": \"<object>\",\n  \"sort\": \"<object>\",\n  \"limit\": \"<integer>\",\n  \"skip\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "66cbcb8d-0a26-4b8d-8b89-27a1823042a3",
+              "name": "Aggregation results.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "action",
+                    "aggregate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Atlas App Services application ID",
+                      "type": "any",
+                      "value": "{{APP_ID}}",
+                      "key": "APP_ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "apiKey",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"dataSource\": \"mongodb-atlas\",\n  \"database\": \"<string>\",\n  \"collection\": \"<string>\",\n  \"document\": \"<object>\",\n  \"documents\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"filter\": \"<object>\",\n  \"update\": \"<object>\",\n  \"pipeline\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"projection\": \"<object>\",\n  \"sort\": \"<object>\",\n  \"limit\": \"<integer>\",\n  \"skip\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Atlas App Services application ID",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "myapp-abcde",
+      "key": "APP_ID"
+    },
+    {
+      "type": "string",
+      "value": "https://data.mongodb-api.com/app/{{APP_ID}}/endpoint/data/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "apiKey"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "250fa75d-f340-447b-a109-609a90107637",
+    "name": "MongoDB Atlas Data API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The MongoDB Atlas Data API exposes HTTPS endpoints over Atlas clusters,\nletting clients perform CRUD and aggregation operations against MongoDB\ncollections without a driver. Each App Services application has its own\nbase URL containing the app ID. Authentication is via API key passed in\nthe `apiKey` header. NOTE: MongoDB has marked the Data API as end-of-life;\nthis file is retained as an API Evangelist research artifact for the\nschema-free topic.\n\n\nContact Support:\n Name: API Evangelist",
+      "type": "text/plain"
+    }
+  }
+}
