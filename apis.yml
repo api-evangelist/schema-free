@@ -72,6 +72,14 @@ apis:
     url: https://redis.io/docs/data-types/json/
 
 common:
+- type: TrustCenter
+  url: security/schema-free-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/schema-free-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/schema-free-domain-security.yml
+- type: Authentication
+  url: authentication/schema-free-authentication.yml
 - type: Website
   url: https://www.mongodb.com/resources/basics/databases/nosql-explained/data-modeling
 - type: JSONSchema
