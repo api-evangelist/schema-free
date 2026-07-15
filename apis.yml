@@ -72,6 +72,8 @@ apis:
     url: https://redis.io/docs/data-types/json/
 
 common:
+- type: AgenticAccess
+  url: agentic-access/schema-free-agentic-access.yml
 - type: TrustCenter
   url: security/schema-free-trust-center.yml
 - type: VulnerabilityDisclosure
