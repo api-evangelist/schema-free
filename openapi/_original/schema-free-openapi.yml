@@ -1,0 +1,191 @@
+openapi: 3.1.0
+info:
+  title: MongoDB Atlas Data API
+  description: |
+    The MongoDB Atlas Data API exposes HTTPS endpoints over Atlas clusters,
+    letting clients perform CRUD and aggregation operations against MongoDB
+    collections without a driver. Each App Services application has its own
+    base URL containing the app ID. Authentication is via API key passed in
+    the `apiKey` header. NOTE: MongoDB has marked the Data API as end-of-life;
+    this file is retained as an API Evangelist research artifact for the
+    schema-free topic.
+  version: "1.0.0"
+  contact:
+    name: API Evangelist
+    url: https://apievangelist.com
+servers:
+  - url: https://data.mongodb-api.com/app/{APP_ID}/endpoint/data/v1
+    description: Atlas Data API (per-app endpoint)
+    variables:
+      APP_ID:
+        default: myapp-abcde
+        description: Atlas App Services application ID
+security:
+  - ApiKeyAuth: []
+paths:
+  /action/insertOne:
+    post:
+      summary: Insert one document
+      operationId: insertOne
+      tags: [Documents]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DataRequest'
+      responses:
+        '200':
+          description: Inserted ID.
+  /action/insertMany:
+    post:
+      summary: Insert many documents
+      operationId: insertMany
+      tags: [Documents]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DataRequest'
+      responses:
+        '200':
+          description: Inserted IDs.
+  /action/findOne:
+    post:
+      summary: Find one document
+      operationId: findOne
+      tags: [Documents]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DataRequest'
+      responses:
+        '200':
+          description: A document.
+  /action/find:
+    post:
+      summary: Find documents
+      operationId: find
+      tags: [Documents]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DataRequest'
+      responses:
+        '200':
+          description: Documents array.
+  /action/updateOne:
+    post:
+      summary: Update one document
+      operationId: updateOne
+      tags: [Documents]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DataRequest'
+      responses:
+        '200':
+          description: Update result.
+  /action/updateMany:
+    post:
+      summary: Update many documents
+      operationId: updateMany
+      tags: [Documents]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DataRequest'
+      responses:
+        '200':
+          description: Update result.
+  /action/deleteOne:
+    post:
+      summary: Delete one document
+      operationId: deleteOne
+      tags: [Documents]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DataRequest'
+      responses:
+        '200':
+          description: Delete result.
+  /action/deleteMany:
+    post:
+      summary: Delete many documents
+      operationId: deleteMany
+      tags: [Documents]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DataRequest'
+      responses:
+        '200':
+          description: Delete result.
+  /action/aggregate:
+    post:
+      summary: Run an aggregation pipeline
+      operationId: aggregate
+      tags: [Documents]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DataRequest'
+      responses:
+        '200':
+          description: Aggregation results.
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: apiKey
+  schemas:
+    DataRequest:
+      type: object
+      required: [dataSource, database, collection]
+      properties:
+        dataSource:
+          type: string
+          example: mongodb-atlas
+        database:
+          type: string
+        collection:
+          type: string
+        document:
+          type: object
+        documents:
+          type: array
+          items:
+            type: object
+        filter:
+          type: object
+        update:
+          type: object
+        pipeline:
+          type: array
+          items:
+            type: object
+        projection:
+          type: object
+        sort:
+          type: object
+        limit:
+          type: integer
+        skip:
+          type: integer

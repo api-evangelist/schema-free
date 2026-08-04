@@ -1,0 +1,14 @@
+{
+  "provider": "schema-free",
+  "sources": [
+    "schema-free-documents-api-openapi.yml"
+  ],
+  "outputs": [
+    "schema-free-documents-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
