@@ -1,0 +1,161 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MongoDB Atlas Data Documents API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "apiKey",
+      "value": "{{apiKey}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Documents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Insert one document",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://data.mongodb-api.com/app/{APP_ID}/endpoint/data/v1/action/insertOne",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Insert one document"
+        },
+        {
+          "info": {
+            "name": "Insert many documents",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://data.mongodb-api.com/app/{APP_ID}/endpoint/data/v1/action/insertMany",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Insert many documents"
+        },
+        {
+          "info": {
+            "name": "Find one document",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://data.mongodb-api.com/app/{APP_ID}/endpoint/data/v1/action/findOne",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Find one document"
+        },
+        {
+          "info": {
+            "name": "Find documents",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://data.mongodb-api.com/app/{APP_ID}/endpoint/data/v1/action/find",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Find documents"
+        },
+        {
+          "info": {
+            "name": "Update one document",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://data.mongodb-api.com/app/{APP_ID}/endpoint/data/v1/action/updateOne",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update one document"
+        },
+        {
+          "info": {
+            "name": "Update many documents",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://data.mongodb-api.com/app/{APP_ID}/endpoint/data/v1/action/updateMany",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update many documents"
+        },
+        {
+          "info": {
+            "name": "Delete one document",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://data.mongodb-api.com/app/{APP_ID}/endpoint/data/v1/action/deleteOne",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete one document"
+        },
+        {
+          "info": {
+            "name": "Delete many documents",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://data.mongodb-api.com/app/{APP_ID}/endpoint/data/v1/action/deleteMany",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete many documents"
+        },
+        {
+          "info": {
+            "name": "Run an aggregation pipeline",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://data.mongodb-api.com/app/{APP_ID}/endpoint/data/v1/action/aggregate",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Run an aggregation pipeline"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
