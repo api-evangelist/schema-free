@@ -36,9 +36,12 @@ artifacts:
   json-structure/schema-free-nosql-structure.json:
     method: unknown
     evidence: no authorship recorded
+  openapi/_original/schema-free-openapi.yml:
+    method: harvested
+    evidence: fetched from the provider as-is; byte-identical to the source
   openapi/schema-free-documents-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
+    method: derived
+    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
   plans/schema-free-plans-pricing.yml:
     method: generated
     evidence: declared in the artifact

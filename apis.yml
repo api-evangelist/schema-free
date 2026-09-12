@@ -172,3 +172,5 @@ integrations:
 maintainers:
 - FN: API Evangelist
   email: info@apievangelist.com
+x-parent: mongodb
+x-relationship: product
