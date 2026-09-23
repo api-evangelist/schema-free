@@ -1,7 +1,7 @@
 {
   "provider": "schema-free",
   "sources": [
-    "schema-free-documents-api-openapi.yml"
+    "_original/schema-free-openapi.yml"
   ],
   "outputs": [
     "schema-free-documents-api-openapi.yml"
@@ -10,8 +10,12 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "schema-free-documents-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "schema-free-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "schema-free-openapi.yml: declared missing tag: Documents",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "schema-free-documents-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
