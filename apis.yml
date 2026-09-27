@@ -71,6 +71,12 @@ apis:
   - AWS
   - DynamoDB
   - NoSQL
+  - Key-Value Store
+  - Serverless
+  tags_raw:
+  - AWS
+  - DynamoDB
+  - NoSQL
   - Key-Value
   - Serverless
   properties:
@@ -102,6 +108,11 @@ apis:
   humanURL: https://redis.io/docs/data-types/json/
   baseURL: https://your-redis-host:6379
   tags:
+  - Redis
+  - Key-Value Store
+  - JSON
+  - In-Memory
+  tags_raw:
   - Redis
   - Key-Value
   - JSON
